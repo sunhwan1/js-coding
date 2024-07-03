@@ -23,9 +23,9 @@
             }
         ];
         let str = '';
-        data2.forEach((d) => {
-            str += '<p>'+d.name+'</p>' 
-                + '<p>'+d.description+'</p>' 
+        data.forEach((d) => {
+            str += '<p>'+d.title+'</p>' 
+                + '<a href="'+d.url+'">'+d.url+'</a>' 
                 + '<hr/>';
         });
         document.getElementById('wrapper').innerHTML = str;
