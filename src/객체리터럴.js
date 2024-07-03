@@ -20,6 +20,8 @@ const zerocho = {
         1,2,3,4,5,6
     ]
 }
+zerocho.data = {id: 1};
+console.log(zerocho.data);
 const info = {name, year, month, date, gender};
 console.log(zerocho['name']);   // jeongjaehun
 console.log(zerocho.name);      // jeongjaehun
