@@ -1,0 +1,35 @@
+<html>
+    <script>
+        console.log('hihi');
+    </script>
+    <script src="./data.js"></script>
+    <body>
+        <div id="wrapper">
+            <!-- <p>Ford estrena nueva planta eléctrica en Long Beach</p>
+            <a href="https://www.motoryracing.com/coches/noticias/ford-planta-electrica-long-beach/">https://www.motoryracing.com/coches/noticias/ford-planta-electrica-long-beach/</a>
+            <hr/> -->
+        </div>
+    </body><!-- HTML 주석 -->
+    <script>
+        // document.getElementById('wrapper').innerHTML = '<p style="color:blue;">안녕하세요</p>';
+        const data2 = [
+            {
+                name: 'jj',
+                description: 'its description1'
+            },
+            {
+                name: 'gg',
+                description: 'description2'
+            }
+        ];
+        let str = '';
+        data2.forEach((d) => {
+            str += '<p>'+d.name+'</p>' 
+                + '<p>'+d.description+'</p>' 
+                + '<hr/>';
+        });
+        document.getElementById('wrapper').innerHTML = str;
+        // data.js의 const data 배열을 이용해서
+        // 선택적으로 데이터 뿌려주기
+    </script>
+</html>
