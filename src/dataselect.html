@@ -24,8 +24,8 @@
         ];
         let str = '';
         data.forEach((d) => {
-            str += '<p>'+d.title+'</p>' 
-                + '<a href="'+d.url+'">'+d.url+'</a>' 
+            str += `<p>${d.title}</p>`
+                + `<a href=${d.url}>${d.url}</a>`
                 + '<hr/>';
         });
         document.getElementById('wrapper').innerHTML = str;
