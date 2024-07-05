@@ -26,9 +26,9 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 // Render news page
-const renderNewsPage = async (res, country, viewName) => {
+const renderNewsPage = async (res, country, category, viewName) => {
     try {
-        const data = await getApiData(country);
+        const data = await getApiData(country, category);
         res.render(viewName, {
             one: "this is one",
             two: "this is two",
@@ -41,10 +41,13 @@ const renderNewsPage = async (res, country, viewName) => {
 };
 
 // US news route
-app.get('/', (req, res) => renderNewsPage(res, 'us', 'index'));
+app.get('/us', (req, res) => renderNewsPage(res, 'us', '', 'US_News'));
 
 // Korean news route
-app.get('/domestic', (req, res) => renderNewsPage(res, 'kr', 'domestic'));
+app.get('/kr', (req, res) => renderNewsPage(res, 'kr', '', 'KR_News'));
+
+// Korean sports news route
+app.get('/kr_sports', (req, res) => renderNewsPage(res, 'kr', 'sports', 'KR_SportsNews'));
 
 const port = 8000;
 app.listen(port, () => {
